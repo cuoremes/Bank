@@ -1,12 +1,12 @@
 public class Client {
     String passport;
     String name;
-    int balance;
-    public Client(String passportInput, String nameInput, int balanceInput){
+    int balance = 0;
+    String password;
+    public Client(String passportInput, String nameInput,String passwordInput){
         passport = passportInput;
         name = nameInput;
-        balance = balanceInput;
-
+        password = passwordInput;
     }
     public void deposit(int amount){
         balance +=amount;
@@ -15,5 +15,4 @@ public class Client {
         if(amount <= balance){balance-=amount;return true;}
         else{return false;}
     }
-
 }
